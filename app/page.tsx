@@ -1,5 +1,6 @@
 'use client';
 import { useState } from "react";
+import { Menu } from '@headlessui/react';
 
 export default function Home() {
   const [num1, setNum1] = useState("");
@@ -7,9 +8,8 @@ export default function Home() {
   const [result, setResult] = useState<number | null>(null);
 
   const add = () => {
-    setResult(Number(num1) + Number(num2));
+    setResult(Number(num1) * Number(num2));
   };
-
   return (
     <div style={{ textAlign: "center", marginTop: "100px" }}>
       <h1>Simple Calculator</h1>
@@ -25,7 +25,7 @@ export default function Home() {
         onChange={(e) => setNum2(e.target.value)}
       />
       <br /><br />
-      <button onClick={add}>Add</button>
+      <button onClick={add}>Multiple</button>
       <h2>Result: {result !== null ? result : "No result yet"}</h2>
     </div>
   );
