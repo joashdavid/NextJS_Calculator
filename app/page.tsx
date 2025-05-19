@@ -1,7 +1,5 @@
 'use client';
 import { useState } from "react";
-import { Menu } from '@headlessui/react';
-
 export default function Home() {
   const [num1, setNum1] = useState("");
   const [num2, setNum2] = useState("");
